@@ -7,7 +7,7 @@
     "orientation": "portrait",
     "icon": "./assets/havenIcon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/havenIcon.png",
       "resizeMode": "contain",
