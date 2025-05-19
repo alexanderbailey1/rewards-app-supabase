@@ -3,11 +3,12 @@
 import { useEffect, useState } from 'react'
 import { Text, YStack, Button, Spinner } from 'tamagui'
 import { supabase } from '../../lib/supabaseClient'
+import type { Profile } from '../../lib/types'
 import { useRouter } from 'expo-router'
 
 export default function ProfileScreen() {
   const router = useRouter()
-  const [profile, setProfile] = useState<any>(null)
+  const [profile, setProfile] = useState<Profile | null>(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -26,7 +27,7 @@ export default function ProfileScreen() {
       if (error) {
         console.error(error)
       } else {
-        setProfile(data)
+        setProfile(data as Profile)
       }
     }
 
