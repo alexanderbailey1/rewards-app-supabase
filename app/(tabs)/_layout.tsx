@@ -13,7 +13,7 @@ export default function TabsLayout() {
         <Tabs
           screenOptions={({ route }) => ({
             tabBarIcon: ({ color, size }) => {
-              let iconName: any
+              let iconName: keyof typeof Ionicons.glyphMap
 
               if (route.name === 'home') {
                 iconName = 'home-outline'
